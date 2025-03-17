@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn html Event </title>
+</head>
+
+<body>
+    <h2> Amzing image</h2>
+    
+        <ul id="images">
+            <li><img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" id='owl' width="500" height="333">
+            </li>
+            <li><img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" id="house" width="500"
+                    height="333"></li>
+            <li><img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Trulli" id="river" width="500"
+                    height="333"></li>
+        </ul>
+
+
+        <script>
+            // document.getElementById('owl').onclick = function(){
+            //     alert('you click the first image')
+            // }
+        
+            //Best Approach
+        
+            // document.getElementById('owl').addEventListener('click', function (e) {
+            //     alert('you click the first image Again!!')
+            //     console.log(e)
+            // }, false)
+        
+            // Event padna Kon Kon sa Hai
+            //---Type , timestamp,  defaultPrevent , targrt , toElement , srcElement
+            //-- currentTarget , clientX, screenX , screenY
+            //altKey, ctrlKey, shiftKey, metaKey ,keyCode
+        
+            // boobling 
+            document.getElementById('images').addEventListener('click', function (e) {
+               console.log("clicked inside the ul")
+            },false)
+            document.getElementById('owl').addEventListener('click', function (e) {
+               console.log("clicked the firt image")
+               e.stopPropagation();
+            }, false)
+        </script>
+   
+</body>
+
+</html>

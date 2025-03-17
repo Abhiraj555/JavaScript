@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_javascript</title>
+</head>
+<body style="background-color: rgb(30, 28, 28);">
+    
+
+    <script>
+        // -----------DoM manupulation----------------
+
+        // creat element
+        const div = document.createElement('div');
+        console.log(div);
+        div.className = 'container';
+        div.id = Math.floor(Math.random()*10+1);
+        div.setAttribute('title', "generated title");
+        div.style.backgroundColor = 'green';
+        div.style.color = 'white';
+        div.style.padding = '10px';
+        //div.innerText = 'My Name is Bablu kumar Ray';
+        const addtext = document.createTextNode("This is div container");
+        div.appendChild(addtext);
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>
